@@ -1,0 +1,394 @@
+
+.pageF {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.full-width td {
+    text-align: center;
+}
+
+em {
+    font-style: normal;
+}
+
+.studentPartTable td {
+    text-align: left;
+    padding: 10px;
+}
+
+.upperPart, .lowerPart {
+    border-left: 10px dashed #747474;
+    border-bottom: 10px dashed #747474;
+    padding: 20px;
+}
+
+/******************** red color*/
+.baseBorder {
+    border: 2px solid #e8389f;
+}
+
+.baseColor {
+    color: #e8389f;
+}
+
+.innerRound {
+    background: #fff7fa;
+}
+
+    .innerRound td {
+        border: none !important;
+        text-align: center;
+    }
+
+        .innerRound td:nth-child(odd) {
+            background: #ffe7f0;
+        }
+
+        .innerRound td .round {
+            border: 1px solid;
+            background: #ffd5e4;
+            border-radius: 32px;
+            width: 18px;
+            height: 17px;
+            margin: 1px auto;
+            font-size: 11px;
+        }
+
+.filupTable {
+    border: 1px solid #e8389f;
+}
+.filupTable td {
+    border: 1px solid #e8389f;
+    color: #e8389f;
+}
+/******************** red color end*/
+
+/******************** black color*/
+.filupTable_b {
+    border: 1px solid black;
+}
+.baseBorder_b {
+    border: 2px solid black;
+}
+
+.baseColor_b {
+    color: #1d1d1d;
+}
+
+.innerRound_b {
+    background: #fcfcfc;
+}
+
+    .innerRound_b td {
+        border: none !important;
+        text-align: center;
+    }
+
+        .innerRound_b td:nth-child(odd) {
+            background: #f2f2f2;
+        }
+
+        .innerRound_b td .round {
+            border: 1px solid;
+            background: #ececec;
+            border-radius: 32px;
+            width: 18px;
+            height: 17px;
+            margin: 1px auto;
+            font-size: 11px;
+        }
+
+.filupTable_b td {
+    border: 1px solid #858585;
+    color: #787878;
+}
+/******************** black color end*/
+
+
+
+.filupTableFirstChild td {
+    border-left: none;
+    border-top: none;
+}
+
+.filupTableFirstChild :last-child {
+    border-right: none;
+}
+
+.pfillupTable td {
+    vertical-align: top;
+}
+
+.signatureTd {
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    right: 0;
+    font-size: 12px;
+    border-top: 1px solid;
+}
+
+.lowerPartObtMark {
+    border: 1px solid black;
+    height: 100px;
+}
+
+.lowerPartObtMarkNum {
+    border: 1px solid black;
+    height: 50px;
+}
+
+    .lowerPartObtMarkNum div {
+        transform: rotate(-90deg);
+    }
+
+.aText {
+    transform: rotate(-90deg);
+}
+
+.SchoolName {
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 2px 2px #ededed;
+}
+
+.Address {
+    font-weight: 500;
+}
+
+.sessionName {
+    margin-top: 10px;
+}
+
+.className {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.examName {
+}
+
+.laterSpace {
+    letter-spacing: 1px;
+}
+
+.headTdGap {
+    padding: 2px 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+
+.numberstyle {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600 !important;
+}
+
+
+
+
+
+.pageF {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.full-width td {
+    text-align: center;
+}
+
+em {
+    font-style: normal;
+}
+
+.studentPartTable td {
+    text-align: left;
+    padding: 10px;
+}
+
+.upperPart, .lowerPart {
+    border-left: 10px dashed #747474;
+    border-bottom: 10px dashed #747474;
+    padding: 20px;
+}
+
+/******************** red color*/
+.baseBorder {
+    border: 2px solid #e8389f;
+}
+
+.baseColor {
+    color: #e8389f;
+}
+
+.innerRound {
+    background: #fff7fa;
+}
+
+    .innerRound td {
+        border: none !important;
+        text-align: center;
+    }
+
+        .innerRound td:nth-child(odd) {
+            background: #ffe7f0;
+        }
+
+        .innerRound td .round {
+            border: 1px solid;
+            background: #ffd5e4;
+            border-radius: 32px;
+            width: 18px;
+            height: 17px;
+            margin: 1px auto;
+            font-size: 11px;
+        }
+
+.filupTable {
+    border: 1px solid #e8389f;
+}
+.filupTable td {
+    border: 1px solid #e8389f;
+    color: #e8389f;
+}
+/******************** red color end*/
+
+/******************** black color*/
+.filupTable_b {
+    border: 1px solid black;
+}
+.baseBorder_b {
+    border: 2px solid black;
+}
+
+.baseColor_b {
+    color: #1d1d1d;
+}
+
+.innerRound_b {
+    background: #fcfcfc;
+}
+
+    .innerRound_b td {
+        border: none !important;
+        text-align: center;
+    }
+
+        .innerRound_b td:nth-child(odd) {
+            background: #f2f2f2;
+        }
+
+        .innerRound_b td .round {
+            border: 1px solid;
+            background: #ececec;
+            border-radius: 32px;
+            width: 18px;
+            height: 17px;
+            margin: 1px auto;
+            font-size: 11px;
+        }
+
+.filupTable_b td {
+    border: 1px solid #858585;
+    color: #787878;
+}
+/******************** black color end*/
+
+
+
+.filupTableFirstChild td {
+    border-left: none;
+    border-top: none;
+}
+
+.filupTableFirstChild :last-child {
+    border-right: none;
+}
+
+.pfillupTable td {
+    vertical-align: top;
+}
+
+.signatureTd {
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    right: 0;
+    font-size: 12px;
+    border-top: 1px solid;
+}
+
+.lowerPartObtMark {
+    border: 1px solid black;
+    height: 100px;
+}
+
+.lowerPartObtMarkNum {
+    border: 1px solid black;
+    height: 50px;
+}
+
+    .lowerPartObtMarkNum div {
+        transform: rotate(-90deg);
+    }
+
+.aText {
+    transform: rotate(-90deg);
+}
+
+.SchoolName {
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 2px 2px #ededed;
+}
+
+.Address {
+    font-weight: 500;
+}
+
+.sessionName {
+    margin-top: 10px;
+}
+
+.className {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.examName {
+}
+
+.laterSpace {
+    letter-spacing: 1px;
+}
+
+.headTdGap {
+    padding: 2px 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+
+.numberstyle {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600 !important;
+}

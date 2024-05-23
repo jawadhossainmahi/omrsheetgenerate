@@ -1,0 +1,162 @@
+.custom-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 4 5%22%3E%3Cpath fill%3D%22%23343a40%22 d%3D%22M2 0L0 2h4z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 8px 10px;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.custom-select[multiple], .custom-select[size]:not([size="1"]) {
+    height: auto;
+    padding-right: 0.75rem;
+    background-image: none;
+}
+
+.custom-select::-ms-expand {
+    display: none;
+}
+
+.custom-select:disabled {
+    background-color: #e9ecef;
+}
+
+.custom-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #212529;
+}
+
+/* Optional form label styling */
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* Optional container styling */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Optional margin-top class */
+.mt-5 {
+    margin-top: 3rem;
+}
+
+
+.custom-input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+}
+
+.custom-input:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.custom-input::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.custom-input:disabled, .custom-input[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+
+
+.custom-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-btn:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004085;
+    text-decoration: none;
+}
+
+.custom-btn:focus, .custom-btn.focus {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004085;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.custom-btn:disabled, .custom-btn.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+
+/* my css  */
+
+.form-section{
+    width: 60rem;
+}
+
+.custom-form-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.size-35{
+    flex: 0 0 35%;
+}
+.size-11{
+    flex: 0 0 11%;
+}
+
+.custom-form-container .custom-form-group:last-child{
+    margin-left: 2rem;
+}

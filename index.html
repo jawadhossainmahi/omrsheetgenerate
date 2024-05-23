@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Document</title>
+
+</head>
+
+<body style="display: flex;justify-content: center;align-items: center;">
+    <div>
+
+        <div class="form-section" style="margin-top: 3rem;">
+            <form id="omr-form">
+                <div class="custom-form-container">
+                    <div class="custom-form-group size-35">
+                        <label for="customSelect" class="form-label">Select Class</label>
+                        <select class="custom-select" id="select-class" required>
+                            <option value="">select class</option>
+                            <option value="1">Class 1</option>
+                            <option value="2">Class 2</option>
+                            <option value="3">Class 3</option>
+                        </select>
+                    </div>
+                    <div class="custom-form-group size-35">
+                        <label for="customSelect" class="form-label">Select Exam</label>
+                        <select class="custom-select" id="select-exam" required>
+                            <option value="">select exam</option>
+                            <option value="1">Exam 1</option>
+                            <option value="2">Exam 2</option>
+                            <option value="3">Exam 3</option>
+                        </select>
+                    </div>
+                    <div class="custom-form-group size-11">
+                        <label for="customSelect" class="form-label">Total Number</label>
+                        <input id="input-total-number" min="1" required type="number" for="custom-input" class="custom-input">
+                    </div>
+                    <div class="custom-form-group">
+                        <button type="submit" class="custom-btn">Generate</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="omr-sheet-container"></div>
+        <template id="omr-sheet-template">
+            <div class="allFrontPage">
+                <div class="pageF" style="height: 1365px;  width: 950px; border: 1px solid #d1d1d1; margin-top: 20px;">
+                    <div class="upperPart">
+                        <table class="full-width" style=" width: 900px;">
+                            <tr>
+                                <td width="20%" style="text-align:center"><img src="./images/edufy_demo.png" alt=""
+                                        style="width:120px" class="image" /></td>
+                                <td width="60%" style="text-align:center">
+                                    <div class="SchoolName laterSpace">Edufy Demo School</div>
+                                    <div class="Address laterSpace">Dhaka, Bangladesh</div>
+                                    <div class="sessionName laterSpace">Jan-2023-Dec-2023</div>
+                                    <div class="className laterSpace">Class Name</div>
+                                    <div class="examName laterSpace">Exam Name</div>
+                                    <div class="baseColor laterSpace" style="font-weight:600"> <em
+                                            class="resource">অবশ্যই
+                                            কালো
+                                            কালির বল পয়েন্ট কলম দ্বারা বৃত্ত ভরাট করিতে হইবে</em></div>
+                                </td>
+                                <td width="20%" style="text-align:right;"><em class="baseColor"
+                                        style=" font-size: 18px; font-weight: 600;">#SN : <em
+                                            class="serialNumber">5232</em></em></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;"><span class="baseColor"><em class="resource">শিক্ষার্থীর
+                                            অংশ</em></span></td>
+                            </tr>
+                        </table>
+                        <div style="margin-top: 8px; " class="baseBorder">
+                            <table class="full-width studentPartTable" style=" width: 900px;">
+                                <tr>
+                                    <td width="60%"><span class="baseColor"><em class="resource">শিক্ষার্থীর
+                                                নাম</em></span>
+                                        :
+                                    </td>
+                                    <td width="20%"><span class="baseColor"><em class="resource">শ্ৰেণী</em></span> :
+                                    </td>
+                                    <td width="20%"><span class="baseColor"><em class="resource">শাখা</em></span> :</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <table class="full-width pfillupTable" style="margin-top:3px">
+                            <tr>
+                                <td width="10%" style="vertical-align:middle">
+                                    <div  class="demoQrCodeContainer" style="display: flex; flex-direction: column; justify-content: center;"><img src="images/qr_demo.png" class="upperPartQrCode image " alt=""
+                                            style="width: 100px; " /></div>
+                                </td>
+                                <td width="10%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource" style=" vertical-align: sub;">রোল
+                                                    নম্বর</em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td>&nbsp;</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="20%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource"
+                                                    style="vertical-align: sub;">শিক্ষার্থী
+                                                    আইডি</em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td>&nbsp;</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%" class="subjectCodelistTd">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource" style="vertical-align: sub;">বিষয়
+                                                    কোড
+                                                </em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td>&nbsp;</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="20%" class="subjectlistTd">
+                                    <table class="full-width filupTable">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table class="full-width subjectTable">
+                                                        <tr>
+                                                            <td class="headTdGap" colspan="3"><em class="resource"
+                                                                    style="vertical-align: sub;">বিষয়</em></td>
+                                                        </tr>
+                                                        <tr class="filupTableFirstChild">
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr class="innerRound subjectInner">
+                                                            <td style="text-align: center;">
+                                                                <table class="full-width">
+                                                                    <tbody>
+                                                                        <tr class="innerRound">
+                                                                            <td width="20%" style="text-align: center;">
+                                                                                <div class="round"></div>
+                                                                            </td>
+                                                                            <td width="80%" style="text-align: center;">
+                                                                                <div style="width: 120px;">Bangla </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="innerRound subjectInner">
+                                                            <td style="text-align: center;">
+                                                                <table class="full-width">
+                                                                    <tbody>
+                                                                        <tr class="innerRound">
+                                                                            <td width="20%" style="text-align: center;">
+                                                                                <div class="round"></div>
+                                                                            </td>
+                                                                            <td width="80%" style="text-align: center;">
+                                                                                <div style="width: 120px;">English</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="innerRound subjectInner">
+                                                            <td style="text-align: center;">
+                                                                <table class="full-width">
+                                                                    <tbody>
+                                                                        <tr class="innerRound">
+                                                                            <td width="20%" style="text-align: center;">
+                                                                                <div class="round"></div>
+                                                                            </td>
+                                                                            <td width="80%" style="text-align: center;">
+                                                                                <div style="width: 120px;">Mathematics
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="innerRound subjectInner">
+                                                            <td style="text-align: center;">
+                                                                <table class="full-width">
+                                                                    <tbody>
+                                                                        <tr class="innerRound">
+                                                                            <td width="20%" style="text-align: center;">
+                                                                                <div class="round"></div>
+                                                                            </td>
+                                                                            <td width="80%" style="text-align: center;">
+                                                                                <div style="width: 120px;">Religion
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="innerRound subjectInner">
+                                                            <td style="text-align: center;">
+                                                                <table class="full-width">
+                                                                    <tbody>
+                                                                        <tr class="innerRound">
+                                                                            <td width="20%" style="text-align: center;">
+                                                                                <div class="round"></div>
+                                                                            </td>
+                                                                            <td width="80%" style="text-align: center;">
+                                                                                <div style="width: 120px;">Drawing &amp;
+                                                                                    Crafting/Orientation</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="5%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource"
+                                                    style="vertical-align: sub; line-height: 13px;">অতিরিক্ত উত্তর
+                                                    পত্রের
+                                                    সংখ্যা</em></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="100%">
+                                                <table class="full-width ">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td width="50%">&nbsp;</td>
+                                                        <td width="50%">&nbsp;</td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td width="50%">
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td width="50%">
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%" style="vertical-align:middle">
+                                    <table class="full-width filupTable" style="width: 100px;">
+                                        <tr>
+                                            <td class="headTdGap">
+                                                <div style="height: 100px;position:relative"><span
+                                                        class="signatureTd">পরিদর্শকের স্বাক্ষর ও তারিখ</span></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="full-width filupTable mt-3" style="width: 100px;">
+                                        <tr>
+                                            <td class="numberstyle" width="50%">নৈব্য</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="numberstyle" width="50%">লিখিত</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="numberstyle" width="50%">প্রাপ্ত মোট নম্বর</td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="lowerPart" style="margin-top:5px">
+                        <table class="full-width mt-3 pfillupTable">
+                            <tr>
+                                <td style="text-align:left;"><span class="baseColor"><em class="resource">পরীক্ষকের
+                                            অংশ</em></span></td>
+                            </tr>
+                            <tr>
+                                <td width="10%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td><span>প্রশ্ন নম্বর</span></td>
+                                            <td style="vertical-align:middle"><span>উত্তর</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>1</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>2</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>3</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>4</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>5</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>6</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>7</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>8</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>9</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>10</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td><span>প্রশ্ন নম্বর</span></td>
+                                            <td style="vertical-align:middle"><span>উত্তর</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>11</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>12</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>13</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>14</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>15</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>16</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>17</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>18</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>19</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>20</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td><span>প্রশ্ন নম্বর</span></td>
+                                            <td style="vertical-align:middle"><span>উত্তর</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>21</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>22</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>23</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>24</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>25</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>26</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>27</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>28</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>29</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>30</span></td>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%" class="subjectCodelistTd">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource" style="vertical-align: sub;">বিষয়
+                                                    কোড
+                                                </em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td>&nbsp;</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="15%" class="subjectlistTd">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td>
+                                                <table class="full-width subjectTable">
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="5%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource"
+                                                    style="vertical-align: sub; line-height: 13px;">অতিরিক্ত উত্তর
+                                                    পত্রের
+                                                    সংখ্যা</em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width ">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td>&nbsp;</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">0</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">1</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">3</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">4</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">7</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">8</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="round">9</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="5%">
+                                    <table class="full-width filupTable">
+                                        <tr>
+                                            <td class="headTdGap"><em class="resource"
+                                                    style="vertical-align: sub; line-height: 13px;">সেট</em></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width ">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td>&nbsp;</td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ক</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>খ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>গ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="innerRound">
+                                                        <td>
+                                                            <div class="round"><span>ঘ</span></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%" style="vertical-align:top">
+                                    <table class="full-width" style=" width: 120px; margin: 0 auto; float: right;">
+                                        <tr>
+                                            <td width="10%" style="vertical-align:middle">
+                                                <div class="demoQrCodeContainer" style="display: flex; flex-direction: column; justify-content: center;"><img src="images/qr_demo.png" class="lowerPartQrCode image " alt=""
+                                                        style="width: 100px; " /></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="full-width filupTable"
+                                        style=" width: 120px; margin: 0 auto; float: right;">
+                                        <tr>
+                                            <td><b><em class="resource" style=" vertical-align: sub;">#SN</em></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table class="full-width">
+                                                    <tr class="filupTableFirstChild">
+                                                        <td style="border-bottom: none;width: 25px;">&nbsp;</td>
+                                                        <td style="border-bottom: none;width: 25px;">&nbsp;</td>
+                                                        <td style="border-bottom: none;width: 25px;">&nbsp;</td>
+                                                        <td style="border-bottom: none;width: 25px;">&nbsp;</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="full-width mt-3" style="position:relative">
+                            <tr>
+                                <td width="80%" style="vertical-align:top;">
+                                    <table class="full-width">
+                                        <tr>
+                                            <td style="width: 28px;" class="aText lowerPartObtMark"><b>নম্বর</b></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                            <td style="width: 28px;" class="lowerPartObtMark"></td>
+                                        </tr>
+                                    </table>
+                                    <table class="full-width" style=" margin-top: -3px;">
+                                        <tr>
+                                            <td style="width: 28px;" class="aText lowerPartObtMarkNum"><b>প্রশ্ন
+                                                    নম্বর</b>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>1</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>2</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>3</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>4</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>5</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>6</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>7</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>8</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>9</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>10</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>11</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>12</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>13</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>14</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>15</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>16</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>17</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>18</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>19</div>
+                                            </td>
+                                            <td style="width: 28px;" class="lowerPartObtMarkNum">
+                                                <div>20</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1%"></td>
+                                <td width="10%" style="top: -180px; position: absolute; right:-43px;">
+                                    <table class="full-width filupTable mt-3" style="width: 100px;">
+                                        <tr>
+                                            <td class="headTdGap">
+                                                <div style="height: 90px; width: 115px; position: relative"><span
+                                                        class="signatureTd">পরীক্ষকের স্বাক্ষর ও তারিখ</span></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="full-width filupTable mt-3" style="width: 100px;">
+                                        <tr>
+                                            <td class="headTdGap">
+                                                <div style="height: 90px; width: 115px; position: relative"><span
+                                                        class="signatureTd">নিরীক্ষকের স্বাক্ষর ও তারিখ</span></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="full-width filupTable mt-3" style="width: 120px;">
+                                        <tr>
+                                            <td class="numberstyle" width="50%">নৈব্য</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="numberstyle" width="50%">লিখিত</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="numberstyle" width="50%">প্রাপ্ত মোট নম্বর</td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="page-break-after:always">
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+
+    <script  src="qr_generator_js/copyCat.min.js"></script>
+    <script  src="js/script.js" defer></script>
+</body>
+
+</html>
